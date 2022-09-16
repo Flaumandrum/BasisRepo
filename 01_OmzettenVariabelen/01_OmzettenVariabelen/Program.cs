@@ -46,8 +46,21 @@ namespace _01_OmzettenVariabelen
             Console.WriteLine();
             Console.WriteLine();
 
-            // Stap 5: Toon de getallen in omgekeerde volgorde
+            // Begeleid de gebruiker
+            Console.WriteLine("Bedankt om de getallen in te geven. \n\nDruk op enter om verder te gaan.");
+            Console.ReadKey();
 
+            //Scherm leegmaken 
+            Console.Clear();
+
+            // Stap 5: Toon de getallen in omgekeerde volgorde
+            Console.WriteLine("Getal 3 : " + _getal3.ToString());
+            Console.WriteLine("Getal 2 : {0}", _getal2.ToString());
+            Console.WriteLine($"Getal 1 : {_getal1.ToString()} ");
+
+            // Begeleid de gebruiker
+            Console.WriteLine(" \n\nDruk op enter om af te sluiten.");
+            Console.ReadKey();
 
         }
     }
