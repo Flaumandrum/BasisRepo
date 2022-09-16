@@ -54,6 +54,7 @@ namespace _01_OmzettenVariabelen
             Console.Clear();
 
             // Stap 5: Toon de getallen in omgekeerde volgorde
+            Console.WriteLine(" Hier zijn jouw 3 getallen in omgekeerde volgorde:\n");
             Console.WriteLine("Getal 3 : " + _getal3.ToString());
             Console.WriteLine("Getal 2 : {0}", _getal2.ToString());
             Console.WriteLine($"Getal 1 : {_getal1.ToString()} ");
