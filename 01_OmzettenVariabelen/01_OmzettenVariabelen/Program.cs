@@ -17,18 +17,36 @@ namespace _01_OmzettenVariabelen
              */
 
             // Velden 
+            Int32 _getal1 = 0, _getal2 = 0, _getal3 = 0;
 
             // Programma
 
             // Stap 1:  Intro
+            Console.WriteLine("Welkom\n\nDruk op enter en geef 3 getallen in.");
+            Console.ReadKey();
 
-            //Stap 2: Vraag getal 1 + opslaan
+            //Scherm leegmaken 
+            Console.Clear();
 
-            //Stap 3: Vraag getal 2 + opslaan
+            // Stap 2: Vraag getal 1 + opslaan
+            Console.Write("Geef getal 1 in: ");
+            _getal1 = Int32.Parse( Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine();
 
-            //Stap 4: Vraag getal 3 + opslaan
+            // Stap 3: Vraag getal 2 + opslaan
+            Console.Write("Geef getal 2 in: ");
+            _getal2 = Int32.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine();
 
-            //Stap 5: Toon de getallen in omgekeerde volgorde
+            // Stap 4: Vraag getal 3 + opslaan
+            Console.Write("Geef getal 3 in: ");
+            _getal3 = Int32.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine();
+
+            // Stap 5: Toon de getallen in omgekeerde volgorde
 
 
         }
