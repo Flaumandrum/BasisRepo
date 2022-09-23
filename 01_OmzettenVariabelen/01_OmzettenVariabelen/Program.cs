@@ -18,13 +18,16 @@ namespace _01_OmzettenVariabelen
 
             // Velden 
             Int32 _getal1 = 0, _getal2 = 0, _getal3 = 0;
-
+            const byte _teller = 6;
+            const byte _noemer = 4;
             // Programma
 
             // Stap 1:  Intro
             Console.WriteLine("Welkom\n\nDruk op enter en geef 3 getallen in.");
             Console.ReadKey();
 
+            Console.WriteLine(Convert.ToString(4 % 6));
+            Console.ReadKey();
             //Scherm leegmaken 
             Console.Clear();
 
