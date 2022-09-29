@@ -57,9 +57,13 @@ namespace _03_If_functie
                     Console.WriteLine("U koos Kapsalon.");
                 }
                 //  Als 4: U koos iets anders
-                else 
+                else if (_keuze == 4)
                 {
                     Console.WriteLine("U koos Iets Anders.");
+                }
+                else 
+                {
+                    Console.WriteLine("U gaf geen geldige keuze in.");
                 }
 
                 Console.WriteLine();
@@ -74,7 +78,7 @@ namespace _03_If_functie
                 // Scherm leegmaken 
                 Console.Clear();
 
-                Console.WriteLine("U gaf geen getal in. ");
+                Console.WriteLine("U gaf geen geldig getal in. ");
                 Console.WriteLine("\nDruk op enter om af te sluiten.");
                 Console.ReadKey();
             }
