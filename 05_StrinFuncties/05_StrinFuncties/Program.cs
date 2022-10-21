@@ -19,7 +19,8 @@ namespace _05_StrinFuncties
             //Velden 
             String _woord1 = "";
             String _woord2 = "";
-            bool _herhalen = true;
+            Int32 sorteren ;
+            bool _herhalen = true, _herhalen2 = true;
 
             //Programma
             //stap 1 : Intro
@@ -37,8 +38,11 @@ namespace _05_StrinFuncties
                 Console.Write("Geef een woord/zin in (minimum 5 letters)");
                 _woord1 = Console.ReadLine();
 
-                if(_woord1.Length >= 5)
+                if (_woord1.Length >= 5)
                 {
+                    //Herhalen stoppen
+                    _herhalen = false;
+
                     //Scherm leegmaken 
                     Console.Clear();
 
@@ -56,10 +60,10 @@ namespace _05_StrinFuncties
                     Console.Clear();
 
                     //Eerste 3 tekens van het woord 
-                    Console.WriteLine($"Dit zijn de eerste 3 letters van het woord:  {_woord1.Substring(0,3)} ");
+                    Console.WriteLine($"Dit zijn de eerste 3 letters van het woord:  {_woord1.Substring(0, 3)} ");
 
                     //Laatste 4 tekens van het woord
-                    Console.WriteLine($"\n\nDit is De laatste 4 letters van het woord: {_woord1.Substring((_woord1.Length-4), 4)}");
+                    Console.WriteLine($"\n\nDit is De laatste 4 letters van het woord: {_woord1.Substring((_woord1.Length - 4), 4)}");
 
                     Console.WriteLine("Druk op enter om verder te gaan ");
                     Console.ReadKey();
@@ -75,7 +79,7 @@ namespace _05_StrinFuncties
                     _woord1 = _woord1.TrimStart();
                     Console.WriteLine($"\n\nDit is het woord met enkel de spaties voor het woord verwijderd: {_woord1}.");
 
-                    //5 spaties voor het woord verwijderd
+                    //5 spaties na het woord verwijderd
                     _woord1 = _woord1.TrimEnd();
                     Console.WriteLine($"\n\nDit is het woord met de spaties na het woord verwijderd: {_woord1}.");
 
@@ -94,7 +98,72 @@ namespace _05_StrinFuncties
                     _woord1 = _woord1.Trim();
                     Console.WriteLine($"\n\nDit is het woord met  de spaties voor en na het woord verwijderd: {_woord1}.");
 
+                    Console.WriteLine("Druk op enter om verder te gaan ");
+                    Console.ReadKey();
 
+                    //Scherm leegmaken 
+                    Console.Clear();
+
+                    // Zoek of er een e in het woord zit 
+                    if (_woord1.IndexOf("E") != -1 || _woord1.IndexOf("e") != -1)
+                    {
+                        Console.WriteLine($"Dit is het woord met e of E vervangen door 3:  {_woord1.Replace("e", "3").Replace("E", "3")} ");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Geen e of E, dus niet van toepassing.");
+                    }
+                    Console.WriteLine("Druk op enter om verder te gaan ");
+                    Console.ReadKey();
+
+                    //Scherm leegmaken 
+                    Console.Clear();
+                    do
+                    {
+
+
+                        //Stap 2 Vraag een woord aan de gebruiker
+                        Console.Write("Geef een tweede woord/zin in (minimum 5 letters)");
+                        _woord2 = Console.ReadLine();
+
+                        if (_woord2.Length >= 5)
+                        {
+                            _herhalen2 = false;
+
+                            sorteren =  String.Compare(_woord1, _woord2);
+                            if (sorteren == 0)
+                            {
+                                Console.WriteLine("Deze 2 woorden/zinnen zijn gelijk");
+
+                            }
+                            else if (sorteren < 0)
+                            {
+                                Console.WriteLine($"Woord1({_woord1}) komt alfabetisch voor woord2({_woord2})");
+
+                            }
+                            else
+                            {
+                                Console.WriteLine($"Woord2({_woord2}) komt alfabetisch voor woord1({_woord1})");
+
+                            }
+
+                            Console.WriteLine("Druk op enter om verder te gaan ");
+                            Console.ReadKey();
+
+                        }
+                        else
+                        {
+                            //Scherm leegmaken 
+                            Console.Clear();
+
+                            Console.WriteLine("Dit woord bevat te weining letters (min 5)");
+                            Console.WriteLine("Druk op enter om opnieuw te proberen");
+                            Console.ReadKey();
+                        }
+                             
+
+                    } while (_herhalen2);
                 }
                 else
                 {
