@@ -18,6 +18,7 @@ namespace Proj_verjaardag
             DateTime _vandaag = DateTime.Now, _verjaardag;
             TimeSpan _verschil;
             int _aantalDagen = 0;
+            String[] _namen = new String[5];
 
 
             // Programma
@@ -26,7 +27,7 @@ namespace Proj_verjaardag
             
             // Vraag de volgende verjaardag
             Console.WriteLine("\n Vul de datum in van uw volgende verjaardag");
-            Console.Write("Datum volgende verjaardag dd/mm/yyy:");
+            Console.Write("Datum volgende verjaardag (dd/mm/yyyy):");
 
             // Fout opvangen mocht er toch iets misgaan
             try
