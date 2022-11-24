@@ -17,6 +17,7 @@ namespace Proj_Array
             // Velden
             String[] _namen = new string[7];
             int _aantal = 0;
+            Random _rdm = new Random();
 
 
             // Programma
@@ -49,6 +50,7 @@ namespace Proj_Array
             Console.ReadKey();
 
             //Scherm leegmaken
+            Console.Clear();
 
             // Laten vullen door de gebruiker
             Console.Write("Hoeveel namen wilt uw opslaan?");
@@ -63,8 +65,30 @@ namespace Proj_Array
                 Console.WriteLine();
             }
 
+            //Scherm leegmaken
+            Console.Clear();
 
 
+            foreach (string s in _namen)
+            {
+                Console.WriteLine(s);
+
+            }
+            Console.WriteLine("\nDruk op enter om verder te gaan.");
+            Console.ReadKey();
+
+            // De winnaar is ...
+            //Scherm leegmaken
+            Console.Clear();
+
+            Console.WriteLine("En de winnaar is ......");
+            Console.WriteLine("\nDruk op enter om verder te gaan.");
+            Console.ReadKey();
+
+            Console.WriteLine(_namen[_rdm.Next(_namen.Count())].ToUpper());
+
+            Console.WriteLine("\nDruk op enter om verder te gaan.");
+            Console.ReadKey();
 
         }
     }
