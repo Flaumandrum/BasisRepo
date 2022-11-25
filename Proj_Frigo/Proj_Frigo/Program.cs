@@ -58,7 +58,7 @@ namespace Proj_Frigo
                         for(int i = 0; i < _frigo.Count(); i++)
                         {
                             //                Check of plaats leeg is
-                            if (_frigo[i] == null)
+                            if (_frigo[i] == null )
                             {
                                 _plaats = i;
                                 break;
@@ -72,6 +72,9 @@ namespace Proj_Frigo
                         {
                             Console.Write("Welk product wilt u toevoegen: ");
                             _frigo[_plaats] = Console.ReadLine();
+
+                            Console.WriteLine("Dit gegeven werd toegevoegd.\nDruk op enter om naar het hoofdmenu te gaan.");
+                            Console.ReadKey();
                         }
                         else
                         {
@@ -86,11 +89,17 @@ namespace Proj_Frigo
                     else if (_keuze == 2)
                     {
                         //        3.2.1   vraag naam product + opslaan
+                        Console.Write("Welk product wilt u zoeken: ");
+                        _naamProduct = Console.ReadLine();
 
                         //        3.2.2   Zoek de naam in array
-                        //                Overloop array
-                        //                Check of de naam in de array staat
-                        //                Bevestig of geef foutmelding.
+                        for(int i = 0; i < _frigo.Count();i++)
+                        {
+                            //                Overloop array
+                            //                Check of de naam in de array staat
+                            //                Bevestig of geef foutmelding.
+
+                        }
 
                     }
                     //      3.3.Als Keuze 3: verwijderen
