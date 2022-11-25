@@ -47,6 +47,9 @@ namespace Proj_Frigo
 
                     // Scherm leegmaken
                     Console.Clear();
+                    
+                    // Reset variabele !!!!!
+                    _plaats = -1;
 
                     //  Stap3:
                     //      3.1.Als Keuze 1: toevoegen
@@ -71,7 +74,7 @@ namespace Proj_Frigo
                         if (_plaats !=-1)
                         {
                             Console.Write("Welk product wilt u toevoegen: ");
-                            _frigo[_plaats] = Console.ReadLine();
+                            _frigo[_plaats] = Console.ReadLine().ToLower().Trim();
 
                             Console.WriteLine("Dit gegeven werd toegevoegd.\nDruk op enter om naar het hoofdmenu te gaan.");
                             Console.ReadKey();
@@ -90,37 +93,97 @@ namespace Proj_Frigo
                     {
                         //        3.2.1   vraag naam product + opslaan
                         Console.Write("Welk product wilt u zoeken: ");
-                        _naamProduct = Console.ReadLine();
+                        _naamProduct = Console.ReadLine().ToLower().Trim();
 
                         //        3.2.2   Zoek de naam in array
-                        for(int i = 0; i < _frigo.Count();i++)
+                        
+                        // Overloop array
+                        for (int i = 0; i < _frigo.Count();i++)
                         {
-                            //                Overloop array
-                            //                Check of de naam in de array staat
-                            //                Bevestig of geef foutmelding.
+                            // Check of de naam in de array staat
+                            if(_frigo[i] == _naamProduct)
+                            {
+                                _plaats = i;
+                            }
+             
+                        }
 
+                        // Bevestig of geef foutmelding.
+                        if (_plaats != -1)
+                        {
+                            Console.WriteLine("De frigo bevat dit product.\nDruk op enter om naar het hoofdmenu te gaan.");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            // Foutmelding
+                            Console.WriteLine("Het product werd niet gevonden.\nDruk op enter om naar het hoofdmenu te gaan.");
+                            Console.ReadKey();
                         }
 
                     }
+
                     //      3.3.Als Keuze 3: verwijderen
                     else if (_keuze == 3)
                     {
                         //        3.3.1   vraag naam product + opslaan
+                        Console.Write("Welk product wilt u zoeken: ");
+                        _naamProduct = Console.ReadLine().ToLower().Trim();
 
                         //        3.3.2   Zoek de naam in array
                         //                Overloop array
-                        //                Check of de naam in de array staat
-                        //                Verwijder en bevestig of geef foutmelding
+                        for (int i = 0; i < _frigo.Count(); i++)
+                        {
+                            // Check of de naam in de array staat
+                            if (_frigo[i] == _naamProduct)
+                            {
+                                _plaats = i;
+                            }
+
+                        }
+                        //Verwijder en bevestig of geef foutmelding
+                        if (_plaats != -1)
+                        {
+                            //Verwijder
+                            _frigo[_plaats] = null;
+
+                            Console.WriteLine("Dit product werd uit de frigo verwijderd.\nDruk op enter om naar het hoofdmenu te gaan.");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            // Foutmelding
+                            Console.WriteLine("Het product werd niet gevonden.\nDruk op enter om naar het hoofdmenu te gaan.");
+                            Console.ReadKey();
+                        }
+
                     }
 
 
                     //      3.4.Als Keuze 3: Tonen
-                    else if (_keuze == 2)
+                    else if (_keuze == 4)
                     {
                         //        3.4.1   Toon alles op het scherm
                         //                Overloop array
-                        //                Zet elke naam op het scherm
-                        //                Sla lege plaatsen over
+                        for(int i = 0; i < _frigo.Count(); i++)
+                        {
+                            //                Zet elke naam op het scherm
+
+                            //                Sla lege plaatsen over
+                            if (_frigo[i] != null)
+                            {
+                                Console.WriteLine($" {i+1}) {_frigo[i].Substring(0,1).ToUpper()}{_frigo[i].Substring(1, _frigo[i].Length-1 )}");
+
+                            }
+                            else
+                            {
+                                Console.WriteLine($" {i + 1}) Leeg");
+                            }
+                        }
+                        // Foutmelding
+                        Console.WriteLine("\n\nDruk op enter om naar het hoofdmenu te gaan.");
+                        Console.ReadKey();
+
                     }
 
                     //      3.5 Afsluiten
