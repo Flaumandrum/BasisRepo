@@ -208,26 +208,6 @@ namespace ProjectAanwezigheden
                     // Als 5: Afsluiten
                     else if (_keuze == 5)
                     {
-                        // sorteer de array
-                        Array.Sort(_voornamen, _achternamen);
-
-                        // Toon de leerlingen,
-                        Console.WriteLine("De aanwezige leerlingen zijn:\n\n");
-                        for (int i = 0; i < _voornamen.Length; i++)
-                        {
-                            if (_voornamen[i] != null)
-                            {
-                                Console.WriteLine($" {(i + 1).ToString()}) {_voornamen[i]} {_achternamen[i]}");
-                            }
-                            else
-                            {
-                                Console.WriteLine($" {(i + 1).ToString()}) leeg ");
-                            }
-
-                        }
-
-                        Console.WriteLine("\n\nDruk op enter om verder te gaan.");
-                        Console.ReadKey();
 
                         // Scherm leegmaken 
                         Console.Clear();
