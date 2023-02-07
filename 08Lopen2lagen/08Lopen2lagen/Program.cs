@@ -30,6 +30,8 @@ namespace _08Lopen2lagen
 
             do
             {
+                //scherm leegmaken 
+                Console.Clear();
 
                 // Toon menu(toevoegen, verwijderen, tonen)
 
@@ -55,10 +57,14 @@ namespace _08Lopen2lagen
                         //        Of Vraag naam + opslaan
                         if(ontvPlaats != -1)
                         {
-                            Console.Write("Geef de naam van deze deelnemer");
+                            Console.Write("Geef de naam van deze deelnemer: ");
                             string naam = Console.ReadLine();
 
-                            if(naam != "")
+                            //scherm leegmaken 
+                            Console.Clear();
+
+
+                            if (naam != "")
                             {
                                 Console.WriteLine($"\n\nHet rugnummer van deze deelnemer is: {(ontvPlaats + 1).ToString()}");
 
@@ -97,7 +103,7 @@ namespace _08Lopen2lagen
                     else if (keuze == 2)
                     {
                         //    Vraag het rugnummer +opslaan
-                        Console.Write("Geef het rugnummer van de deelnemer");
+                        Console.Write("Geef het rugnummer van de deelnemer: ");
                         byte rugnummer = byte.Parse(Console.ReadLine());
 
                         if(rugnummer <=40 && rugnummer >0)
@@ -105,8 +111,13 @@ namespace _08Lopen2lagen
 
                             //    Zoek + verwijder + opslaan
                             bool ontvAntwoord =  ZoekEnVerwijder(rugnummer);
+
+                            //scherm leegmaken 
+                            Console.Clear();
+
+
                             //        Of Verwijderen bevestigen
-                            if(ontvAntwoord)
+                            if (ontvAntwoord)
                             {
                                 //begeleiden
                                 Console.WriteLine("Dit rugnummer is verwijderd.");
