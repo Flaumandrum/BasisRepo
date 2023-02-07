@@ -50,6 +50,11 @@ namespace _08Lopen2lagen
             return antwoord;
         }
 
+        /// <summary>
+        /// voegt een ontvangen naam toe, in de array op een ontvangen plaats
+        /// </summary>
+        /// <param name="ontvNaam"></param>
+        /// <param name="ontvPlaats"></param>
         static void Toevoegen(String ontvNaam, int ontvPlaats)
         {
             // Sla de ontvangen naam op in de array op de ontvangen lege index
@@ -58,15 +63,20 @@ namespace _08Lopen2lagen
         }
 
 
+        /// <summary>
+        /// verwijdert de gegevens in de array op een bepaalde plaats via een ontvangen rugnummer
+        /// </summary>
+        /// <param name="ontvRugnummer"></param>
+        /// <returns> of het verwijderen gelukt is (true) of niet (false)</returns>
         static Boolean ZoekEnVerwijder(byte ontvRugnummer)
         {
             // maak een antwoord om terug te sturen 
             Boolean antwoord = false;
            
             // Kijk of de plaats leeg is 
-            if (_namen[ontvRugnummer] != null)
+            if (_namen[(ontvRugnummer-1)] != null)
             {
-                _namen[ontvRugnummer] = null;
+                _namen[(ontvRugnummer-1)] = null;
                 antwoord= true;
             }
            
@@ -74,7 +84,10 @@ namespace _08Lopen2lagen
             return antwoord;
         }
 
-
+        /// <summary>
+        /// geeft alle ingeschreven lopers weer, met hun rugnummer
+        /// </summary>
+        /// <returns></returns>
         static String ToonAlleGegevens()
         {
             // maak een antwoord om terug te sturen 
