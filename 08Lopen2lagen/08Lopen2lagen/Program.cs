@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _08Lopen2lagen
 {
@@ -19,7 +16,181 @@ namespace _08Lopen2lagen
         // GUI
         static void Main(string[] args)
         {
-            
+            //lokale variabelen
+            byte keuze = 0;
+
+            // Intro
+            Console.WriteLine("Welkom in dit programma om lopers toe te voegen.");
+            Console.WriteLine("\nDruk op enter om verder te gaan.");
+
+            Console.ReadKey();
+
+            //scherm leegmaken 
+            Console.Clear();
+
+            do
+            {
+
+                // Toon menu(toevoegen, verwijderen, tonen)
+
+                Console.WriteLine("Maak uw keuze uit onderstaand menu:\n");
+                Console.WriteLine("\n   1) Toevoegen loper \n   2) Verwijder een loper\n   3) Toon de lopers\n   4) Afsluiten");
+                try
+                {
+
+                    // Vraag keuze +opslaan
+                    Console.Write("Uw keuze: ");
+                    keuze = byte.Parse(Console.ReadLine());
+
+                    //scherm leegmaken 
+                    Console.Clear();
+
+                    // Als 1: Toevoegen
+                    if (keuze == 1)
+                    {
+
+                        //    Check lege plaats +opslaan
+                        sbyte ontvPlaats = CheckLegePlaats();
+
+                        //        Of Vraag naam + opslaan
+                        if(ontvPlaats != -1)
+                        {
+                            Console.Write("Geef de naam van deze deelnemer");
+                            string naam = Console.ReadLine();
+
+                            if(naam != "")
+                            {
+                                Console.WriteLine($"\n\nHet rugnummer van deze deelnemer is: {(ontvPlaats + 1).ToString()}");
+
+                                Toevoegen(naam, ontvPlaats);
+
+                                //begeleiding
+                                Console.WriteLine("\nDeze deelnemer werd toegevoegd.");
+                                Console.WriteLine("\nDruk op enter om terug te keren naar het hoofdmenu.");
+
+                                Console.ReadKey();
+                            }
+                            else
+                            {
+                                //scherm leegmaken 
+                                Console.Clear();
+
+                                //Foutmelding
+                                Console.WriteLine("U gaf geen naam in.");
+                                Console.WriteLine("\nDruk op enter om terug te keren naar het hoofdmenu.");
+
+                                Console.ReadKey();
+                            }
+                        }
+                        //         Of foutmelding
+                        else
+                        {
+                            //Foutmelding
+                            Console.WriteLine("Er is geen plaats meer om deelnemers toe te voegen.");
+                            Console.WriteLine("\nDruk op enter om terug te keren naar het hoofdmenu.");
+
+                            Console.ReadKey();
+                        }
+
+                    }
+                    // Als 2: verwijderen
+                    else if (keuze == 2)
+                    {
+                        //    Vraag het rugnummer +opslaan
+                        Console.Write("Geef het rugnummer van de deelnemer");
+                        byte rugnummer = byte.Parse(Console.ReadLine());
+
+                        if(rugnummer <=40 && rugnummer >0)
+                        {
+
+                            //    Zoek + verwijder + opslaan
+                            bool ontvAntwoord =  ZoekEnVerwijder(rugnummer);
+                            //        Of Verwijderen bevestigen
+                            if(ontvAntwoord)
+                            {
+                                //begeleiden
+                                Console.WriteLine("Dit rugnummer is verwijderd.");
+                                Console.WriteLine("\nDruk op enter om terug te keren naar het hoofdmenu.");
+
+                                Console.ReadKey();
+                            }
+                            //        Of foutmelding
+                            else
+                            {
+                                //scherm leegmaken 
+                                Console.Clear();
+
+
+                                //Foutmelding
+                                Console.WriteLine("Dit rugnummer is reeds verwijderd.");
+                                Console.WriteLine("\nDruk op enter om terug te keren naar het hoofdmenu.");
+
+                                Console.ReadKey();
+                            }
+
+                        }
+                        else
+                        {
+                            //scherm leegmaken 
+                            Console.Clear();
+
+
+                            //Foutmelding
+                            Console.WriteLine("U gaf geen juist rugnummer in.");
+                            Console.WriteLine("\nDruk op enter om terug te keren naar het hoofdmenu.");
+
+                            Console.ReadKey();
+                        }
+                    }
+
+                    // Als 3: Tonen
+                    else if (keuze == 3)
+                    {
+                        //    Toon gegevens
+                        Console.WriteLine(ToonAlleGegevens());
+
+                        Console.WriteLine("\n\nDruk op enter om terug te keren naar het hoofdmenu.");
+
+                        Console.ReadKey();
+                    }
+                    // else 4: Afsluiten
+                    else if (keuze == 4)
+                    {
+                        //scherm leegmaken 
+                        Console.Clear();
+
+                        //Foutmelding
+                        Console.WriteLine("Tot een volgende keer.");
+                        Console.WriteLine("\nDruk op enter om af te sluiten.");
+
+                        Console.ReadKey();
+                    }
+
+                    else 
+                    {
+                        //scherm leegmaken 
+                        Console.Clear();
+
+                        //Foutmelding
+                        Console.WriteLine("U gaf geen juiste keuze in.");
+                        Console.WriteLine("\nDruk op enter om terug te keren naar het hoofdmenu.");
+
+                        Console.ReadKey();
+                    }
+                }
+                catch 
+                {
+                    //scherm leegmaken 
+                    Console.Clear();
+
+                    //Foutmelding
+                    Console.WriteLine("U gaf geen juist getal in.");
+                    Console.WriteLine("\nDruk op enter om terug te keren naar het hoofdmenu.");
+
+                    Console.ReadKey();
+                }
+            }
+            while (keuze != 4);
         }
 
         // Functies
