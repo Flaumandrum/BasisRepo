@@ -55,6 +55,7 @@
             this.btnProgramma.TabIndex = 2;
             this.btnProgramma.Text = "Programma";
             this.btnProgramma.UseVisualStyleBackColor = false;
+            this.btnProgramma.Click += new System.EventHandler(this.btnProgramma_Click);
             // 
             // btnAfsluiten
             // 
@@ -66,6 +67,7 @@
             this.btnAfsluiten.TabIndex = 3;
             this.btnAfsluiten.Text = "Afsluiten";
             this.btnAfsluiten.UseVisualStyleBackColor = false;
+            this.btnAfsluiten.Click += new System.EventHandler(this.btnAfsluiten_Click);
             // 
             // FrmStartMenu
             // 

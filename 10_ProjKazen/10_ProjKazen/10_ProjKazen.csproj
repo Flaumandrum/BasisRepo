@@ -58,11 +58,23 @@
     <Compile Include="MijnForms\FrmIntro.Designer.cs">
       <DependentUpon>FrmIntro.cs</DependentUpon>
     </Compile>
+    <Compile Include="MijnForms\FrmProgramma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MijnForms\FrmProgramma.Designer.cs">
+      <DependentUpon>FrmProgramma.cs</DependentUpon>
+    </Compile>
     <Compile Include="MijnForms\FrmStartMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MijnForms\FrmStartMenu.Designer.cs">
       <DependentUpon>FrmStartMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MijnForms\FrmToevoegen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MijnForms\FrmToevoegen.Designer.cs">
+      <DependentUpon>FrmToevoegen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,8 +84,14 @@
     <EmbeddedResource Include="MijnForms\FrmIntro.resx">
       <DependentUpon>FrmIntro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MijnForms\FrmProgramma.resx">
+      <DependentUpon>FrmProgramma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MijnForms\FrmStartMenu.resx">
       <DependentUpon>FrmStartMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MijnForms\FrmToevoegen.resx">
+      <DependentUpon>FrmToevoegen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

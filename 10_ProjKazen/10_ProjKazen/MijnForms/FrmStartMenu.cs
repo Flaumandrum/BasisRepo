@@ -44,5 +44,25 @@ namespace _10_ProjKazen.MijnForms
             }
 
         }
+
+        private void btnAfsluiten_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnProgramma_Click(object sender, EventArgs e)
+        {
+            // Nieuw form aanmaken 
+            FrmProgramma nieuwFrm = new FrmProgramma();
+
+            // Dit form verbergen
+            Hide();
+
+            // Nieuw form tonen 
+            nieuwFrm.ShowDialog();
+
+            // Dit form tonen
+            Show();
+        }
     }
 }
