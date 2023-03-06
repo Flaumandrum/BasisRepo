@@ -16,5 +16,33 @@ namespace _10_ProjKazen.MijnForms
         {
             InitializeComponent();
         }
+
+        private void btnInstellingen_Click(object sender, EventArgs e)
+        {
+            // Nieuw form aanmaken 
+            FrmInstellingen nieuwFrm = new FrmInstellingen();
+
+            // Dit form verbergen
+            Hide();
+
+            // Nieuw form tonen 
+            nieuwFrm.ShowDialog();
+
+            // Dit form tonen
+            Show();
+        }
+
+        private void FrmStartMenu_Load(object sender, EventArgs e)
+        {
+            btnProgramma.Visible = false;
+
+            bool ontvAntwoord = Program.CheckArray();
+
+            if (ontvAntwoord)
+            {
+                btnProgramma.Visible = true;
+            }
+
+        }
     }
 }

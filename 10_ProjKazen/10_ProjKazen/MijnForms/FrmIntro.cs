@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _10_ProjKazen.MijnForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace _10_ProjKazen
 {
@@ -19,6 +21,17 @@ namespace _10_ProjKazen
 
         private void btnIntro_Click(object sender, EventArgs e)
         {
+            // Nieuw form aanmaken 
+            FrmStartMenu nieuwFrm = new FrmStartMenu(); 
+
+            // Dit form verbergen
+            Hide();
+
+            // Nieuw form tonen 
+            nieuwFrm.ShowDialog();  
+
+            // Dit form tonen
+            Show();
 
         }
 

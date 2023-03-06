@@ -43,6 +43,7 @@
             this.btnInstellingen.TabIndex = 1;
             this.btnInstellingen.Text = "Instellingen";
             this.btnInstellingen.UseVisualStyleBackColor = false;
+            this.btnInstellingen.Click += new System.EventHandler(this.btnInstellingen_Click);
             // 
             // btnProgramma
             // 
@@ -80,6 +81,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.FrmStartMenu_Load);
             this.ResumeLayout(false);
 
         }

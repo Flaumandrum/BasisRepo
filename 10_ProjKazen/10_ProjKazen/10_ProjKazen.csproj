@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MijnForms\FrmInstellingen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MijnForms\FrmInstellingen.Designer.cs">
+      <DependentUpon>FrmInstellingen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MijnForms\FrmIntro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MijnForms\FrmInstellingen.resx">
+      <DependentUpon>FrmInstellingen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MijnForms\FrmIntro.resx">
       <DependentUpon>FrmIntro.cs</DependentUpon>
     </EmbeddedResource>
