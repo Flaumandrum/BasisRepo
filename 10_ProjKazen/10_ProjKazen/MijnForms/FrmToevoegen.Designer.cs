@@ -59,9 +59,9 @@
             // 
             // txtNaamKaas
             // 
-            this.txtNaamKaas.Location = new System.Drawing.Point(168, 71);
+            this.txtNaamKaas.Location = new System.Drawing.Point(172, 71);
             this.txtNaamKaas.Name = "txtNaamKaas";
-            this.txtNaamKaas.Size = new System.Drawing.Size(197, 31);
+            this.txtNaamKaas.Size = new System.Drawing.Size(193, 31);
             this.txtNaamKaas.TabIndex = 2;
             // 
             // txtOrigine
@@ -106,6 +106,7 @@
             this.btnOpslaan.TabIndex = 7;
             this.btnOpslaan.Text = "Opslaan";
             this.btnOpslaan.UseVisualStyleBackColor = false;
+            this.btnOpslaan.Click += new System.EventHandler(this.btnOpslaan_Click);
             // 
             // btnAnnuleren
             // 
@@ -117,6 +118,7 @@
             this.btnAnnuleren.TabIndex = 8;
             this.btnAnnuleren.Text = "Annuleren";
             this.btnAnnuleren.UseVisualStyleBackColor = false;
+            this.btnAnnuleren.Click += new System.EventHandler(this.btnAnnuleren_Click);
             // 
             // FrmToevoegen
             // 
@@ -138,6 +140,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gegevens toevoegen";
+            this.Load += new System.EventHandler(this.FrmToevoegen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

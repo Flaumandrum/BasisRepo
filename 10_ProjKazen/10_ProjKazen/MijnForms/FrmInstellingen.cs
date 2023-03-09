@@ -29,6 +29,7 @@ namespace _10_ProjKazen.MijnForms
 
                     MessageBox.Show("De grootte werd aangepast", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    Close();
                 }
                 catch
                 {

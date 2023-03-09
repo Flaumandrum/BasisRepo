@@ -45,6 +45,7 @@
             this.btnToevoegen.TabIndex = 4;
             this.btnToevoegen.Text = "Toevoegen";
             this.btnToevoegen.UseVisualStyleBackColor = false;
+            this.btnToevoegen.Click += new System.EventHandler(this.btnToevoegen_Click);
             // 
             // btnAanpassen
             // 
@@ -56,6 +57,7 @@
             this.btnAanpassen.TabIndex = 5;
             this.btnAanpassen.Text = "Aanpassen";
             this.btnAanpassen.UseVisualStyleBackColor = false;
+            this.btnAanpassen.Click += new System.EventHandler(this.btnAanpassen_Click);
             // 
             // btnVerwijderen
             // 
@@ -67,6 +69,7 @@
             this.btnVerwijderen.TabIndex = 6;
             this.btnVerwijderen.Text = "Verwijderen";
             this.btnVerwijderen.UseVisualStyleBackColor = false;
+            this.btnVerwijderen.Click += new System.EventHandler(this.btnVerwijderen_Click);
             // 
             // btnZoeken
             // 
@@ -78,6 +81,7 @@
             this.btnZoeken.TabIndex = 7;
             this.btnZoeken.Text = "Zoeken";
             this.btnZoeken.UseVisualStyleBackColor = false;
+            this.btnZoeken.Click += new System.EventHandler(this.btnZoeken_Click);
             // 
             // btnAnnuleren
             // 
@@ -89,6 +93,7 @@
             this.btnAnnuleren.TabIndex = 8;
             this.btnAnnuleren.Text = "Annuleren";
             this.btnAnnuleren.UseVisualStyleBackColor = false;
+            this.btnAnnuleren.Click += new System.EventHandler(this.btnAnnuleren_Click);
             // 
             // FrmProgramma
             // 
@@ -106,6 +111,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maak uw keuze:";
+            this.Load += new System.EventHandler(this.FrmProgramma_Load);
             this.ResumeLayout(false);
 
         }

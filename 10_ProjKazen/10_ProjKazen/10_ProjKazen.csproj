@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MijnForms\FrmZoekMelk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MijnForms\FrmZoekMelk.Designer.cs">
+      <DependentUpon>FrmZoekMelk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MijnForms\FrmAanpassen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MijnForms\FrmAanpassen.Designer.cs">
+      <DependentUpon>FrmAanpassen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MijnForms\FrmInstellingen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +69,12 @@
     </Compile>
     <Compile Include="MijnForms\FrmIntro.Designer.cs">
       <DependentUpon>FrmIntro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MijnForms\FrmMenuZoeken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MijnForms\FrmMenuZoeken.Designer.cs">
+      <DependentUpon>FrmMenuZoeken.cs</DependentUpon>
     </Compile>
     <Compile Include="MijnForms\FrmProgramma.cs">
       <SubType>Form</SubType>
@@ -76,13 +94,34 @@
     <Compile Include="MijnForms\FrmToevoegen.Designer.cs">
       <DependentUpon>FrmToevoegen.cs</DependentUpon>
     </Compile>
+    <Compile Include="MijnForms\FrmVerwijderen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MijnForms\FrmVerwijderen.Designer.cs">
+      <DependentUpon>FrmVerwijderen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MijnForms\FrmZoekenOrigine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MijnForms\FrmZoekenOrigine.Designer.cs">
+      <DependentUpon>FrmZoekenOrigine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MijnForms\FrmZoekMelk.resx">
+      <DependentUpon>FrmZoekMelk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MijnForms\FrmAanpassen.resx">
+      <DependentUpon>FrmAanpassen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MijnForms\FrmInstellingen.resx">
       <DependentUpon>FrmInstellingen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MijnForms\FrmIntro.resx">
       <DependentUpon>FrmIntro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MijnForms\FrmMenuZoeken.resx">
+      <DependentUpon>FrmMenuZoeken.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MijnForms\FrmProgramma.resx">
       <DependentUpon>FrmProgramma.cs</DependentUpon>
@@ -92,6 +131,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MijnForms\FrmToevoegen.resx">
       <DependentUpon>FrmToevoegen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MijnForms\FrmVerwijderen.resx">
+      <DependentUpon>FrmVerwijderen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MijnForms\FrmZoekenOrigine.resx">
+      <DependentUpon>FrmZoekenOrigine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -28,8 +28,18 @@ namespace _10_ProjKazen.MijnForms
             // Nieuw form tonen 
             nieuwFrm.ShowDialog();
 
+            //pas form aan
+            bool ontvAntwoord = Program.CheckArray();
+
+            if (ontvAntwoord)
+            {
+                btnProgramma.Visible = true;
+            }
+
             // Dit form tonen
             Show();
+
+
         }
 
         private void FrmStartMenu_Load(object sender, EventArgs e)
