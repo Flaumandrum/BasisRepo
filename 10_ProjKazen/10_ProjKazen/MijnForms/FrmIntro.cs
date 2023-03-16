@@ -21,6 +21,7 @@ namespace _10_ProjKazen
 
         private void btnIntro_Click(object sender, EventArgs e)
         {
+
             // Nieuw form aanmaken 
             FrmStartMenu nieuwFrm = new FrmStartMenu(); 
 
@@ -28,10 +29,13 @@ namespace _10_ProjKazen
             Hide();
 
             // Nieuw form tonen 
-            nieuwFrm.ShowDialog();  
+           if( nieuwFrm.ShowDialog() == DialogResult.Cancel)
+            {
+              Close();    
 
-            // Dit form tonen
-            Show();
+            }
+
+            
 
         }
 

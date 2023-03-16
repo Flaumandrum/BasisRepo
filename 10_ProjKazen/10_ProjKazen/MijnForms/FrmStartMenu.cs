@@ -57,6 +57,7 @@ namespace _10_ProjKazen.MijnForms
 
         private void btnAfsluiten_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
             Close();
         }
 
