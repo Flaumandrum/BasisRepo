@@ -29,5 +29,14 @@ namespace EersteKlassePersoon
             return _deelnemer.VolledigeNaam();
         }
 
+        static public string GetAlleGegevens()
+        {
+            return $"{_deelnemer.VolledigeNaam()} {_deelnemer.GetLeeftijd().ToString()}";
+        }
+
+        static public void Opslaan(string vn, string an, DateTime gd)
+        {
+            _deelnemer = new Persoon(vn, an, gd);
+        }
     }
 }

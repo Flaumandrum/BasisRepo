@@ -19,7 +19,19 @@ namespace EersteKlassePersoon
 
         private void btnNaam_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Program.GetVolledigeNaam());
+            MessageBox.Show(Program.GetAlleGegevens());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Program.Opslaan(txtVn.Text, txtAn.Text, DateTime.Parse(txtGD.Text));
+            }
+            catch
+            {
+                MessageBox.Show("fout");
+            }
         }
     }
 }
