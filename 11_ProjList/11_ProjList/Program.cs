@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KlassePersoon;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,5 +19,25 @@ namespace _11_ProjList
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new StartForm());
         }
+
+        //Tom Adriaens
+        // 17/03/2023
+        // Project list 
+
+        // velden 
+        static List<Persoon> _leerlingen = new List<Persoon>();
+
+        static void Opslaan(string vn, string an, DateTime gd)
+        {
+            Persoon nieuwePersoon = new Persoon(vn, an, gd);
+
+            _leerlingen.Add(nieuwePersoon);
+        }
+
+        static List<Persoon> StuurLeerlingenDoor ()
+        {
+            return _leerlingen;
+        }
+
     }
 }

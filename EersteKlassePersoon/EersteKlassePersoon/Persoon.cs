@@ -54,7 +54,6 @@ namespace EersteKlassePersoon
             _achternaam = ontvAn;
             _geboortedag = ontvGebDatum;
             
-
         }
         
     }
