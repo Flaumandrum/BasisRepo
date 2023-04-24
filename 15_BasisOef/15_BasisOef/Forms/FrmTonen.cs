@@ -16,5 +16,16 @@ namespace _15_BasisOef
         {
             InitializeComponent();
         }
+
+        private void btnTerug_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        // wordt uitgevoerd bij het inladen van deze Form
+        private void FrmTonen_Load(object sender, EventArgs e)
+        {
+            txtToon.Text = Program.Tonen();
+        }
     }
 }

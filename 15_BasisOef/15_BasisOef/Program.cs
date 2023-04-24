@@ -30,6 +30,7 @@ namespace _15_BasisOef
 
         static public String Tonen ( )
         {
+
             return _zin;
         }
     }

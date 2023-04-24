@@ -42,6 +42,7 @@
             this.btnIngeven.TabIndex = 1;
             this.btnIngeven.Text = "Ingeven";
             this.btnIngeven.UseVisualStyleBackColor = true;
+            this.btnIngeven.Click += new System.EventHandler(this.btnIngeven_Click);
             // 
             // btnTerug
             // 
@@ -51,6 +52,7 @@
             this.btnTerug.TabIndex = 2;
             this.btnTerug.Text = "Terug";
             this.btnTerug.UseVisualStyleBackColor = true;
+            this.btnTerug.Click += new System.EventHandler(this.btnTerug_Click);
             // 
             // txtZin
             // 
@@ -78,7 +80,7 @@
             this.Controls.Add(this.btnTerug);
             this.Controls.Add(this.btnIngeven);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmIngeven";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

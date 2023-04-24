@@ -40,6 +40,7 @@
             this.btnTerug.TabIndex = 1;
             this.btnTerug.Text = "Terug";
             this.btnTerug.UseVisualStyleBackColor = true;
+            this.btnTerug.Click += new System.EventHandler(this.btnTerug_Click);
             // 
             // txtToon
             // 
@@ -60,10 +61,12 @@
             this.Controls.Add(this.txtToon);
             this.Controls.Add(this.btnTerug);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmTonen";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hier zijn de zin:";
+            this.Load += new System.EventHandler(this.FrmTonen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -46,5 +46,10 @@ namespace _15_BasisOef
             // Deze form tonen
             Show();
         }
+
+        private void btnAfsluiten_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
