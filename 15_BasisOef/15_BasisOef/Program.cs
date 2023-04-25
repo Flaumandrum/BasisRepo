@@ -20,18 +20,35 @@ namespace _15_BasisOef
         }
 
         // Velden
-        static private String _zin;
+        static private List<String> _zinnen = new List<string>();
 
         // Functies
         static public void Opslaan(string ontvZin)
         { 
-            _zin = ontvZin;
+            _zinnen.Add(ontvZin);
         }
 
         static public String Tonen ( )
         {
+            string antwoord = "";
 
-            return _zin;
+            foreach(string s in _zinnen)
+            {
+                antwoord += s + Environment.NewLine;
+            }
+
+            return antwoord;
         }
+
+        static public List<String> StuurLijstDoor()
+        {
+            return _zinnen;
+        }
+
+        static public void Verwijderen(int ontvIndex)
+        {
+            _zinnen.RemoveAt(ontvIndex);
+        }
+
     }
 }

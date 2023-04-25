@@ -46,34 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\FrmIngeven.cs">
+    <Compile Include="MijnForms\FrmIngeven.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmIngeven.Designer.cs">
+    <Compile Include="MijnForms\FrmIngeven.Designer.cs">
       <DependentUpon>FrmIngeven.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmMenu.cs">
+    <Compile Include="MijnForms\FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmMenu.Designer.cs">
+    <Compile Include="MijnForms\FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmTonen.cs">
+    <Compile Include="MijnForms\FrmTonen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmTonen.Designer.cs">
+    <Compile Include="MijnForms\FrmTonen.Designer.cs">
       <DependentUpon>FrmTonen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MijnForms\FrmVerwijderen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MijnForms\FrmVerwijderen.Designer.cs">
+      <DependentUpon>FrmVerwijderen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\FrmIngeven.resx">
+    <EmbeddedResource Include="MijnForms\FrmIngeven.resx">
       <DependentUpon>FrmIngeven.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmMenu.resx">
+    <EmbeddedResource Include="MijnForms\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmTonen.resx">
+    <EmbeddedResource Include="MijnForms\FrmTonen.resx">
       <DependentUpon>FrmTonen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MijnForms\FrmVerwijderen.resx">
+      <DependentUpon>FrmVerwijderen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

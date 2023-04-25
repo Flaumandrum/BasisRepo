@@ -31,6 +31,7 @@
             this.btnIngeven = new System.Windows.Forms.Button();
             this.btnTonen = new System.Windows.Forms.Button();
             this.btnAfsluiten = new System.Windows.Forms.Button();
+            this.btnVerwijderen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnIngeven
@@ -55,19 +56,30 @@
             // 
             // btnAfsluiten
             // 
-            this.btnAfsluiten.Location = new System.Drawing.Point(366, 27);
+            this.btnAfsluiten.Location = new System.Drawing.Point(201, 83);
             this.btnAfsluiten.Name = "btnAfsluiten";
             this.btnAfsluiten.Size = new System.Drawing.Size(159, 50);
-            this.btnAfsluiten.TabIndex = 3;
+            this.btnAfsluiten.TabIndex = 5;
             this.btnAfsluiten.Text = "Afsluiten";
             this.btnAfsluiten.UseVisualStyleBackColor = true;
             this.btnAfsluiten.Click += new System.EventHandler(this.btnAfsluiten_Click);
+            // 
+            // btnVerwijderen
+            // 
+            this.btnVerwijderen.Location = new System.Drawing.Point(36, 83);
+            this.btnVerwijderen.Name = "btnVerwijderen";
+            this.btnVerwijderen.Size = new System.Drawing.Size(159, 50);
+            this.btnVerwijderen.TabIndex = 4;
+            this.btnVerwijderen.Text = "Verwijderen";
+            this.btnVerwijderen.UseVisualStyleBackColor = true;
+            this.btnVerwijderen.Click += new System.EventHandler(this.btnVerwijderen_Click);
             // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 103);
+            this.ClientSize = new System.Drawing.Size(400, 174);
+            this.Controls.Add(this.btnVerwijderen);
             this.Controls.Add(this.btnAfsluiten);
             this.Controls.Add(this.btnTonen);
             this.Controls.Add(this.btnIngeven);
@@ -86,6 +98,7 @@
         private System.Windows.Forms.Button btnIngeven;
         private System.Windows.Forms.Button btnTonen;
         private System.Windows.Forms.Button btnAfsluiten;
+        private System.Windows.Forms.Button btnVerwijderen;
     }
 }
 
