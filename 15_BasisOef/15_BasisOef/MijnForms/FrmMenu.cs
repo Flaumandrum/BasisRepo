@@ -67,5 +67,20 @@ namespace _15_BasisOef
             // Deze form tonen
             Show();
         }
+
+        private void btnAanpassen_Click(object sender, EventArgs e)
+        {
+            // nieuw form aanmaken 
+            FrmAanpassen nieuweForm = new FrmAanpassen();
+
+            // Deze form verbergen 
+            Hide();
+
+            // Nieuwe form tonen
+            nieuweForm.ShowDialog();
+
+            // Deze form tonen
+            Show();
+        }
     }
 }

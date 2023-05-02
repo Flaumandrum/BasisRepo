@@ -50,5 +50,10 @@ namespace _15_BasisOef
             _zinnen.RemoveAt(ontvIndex);
         }
 
+        static public void Aanpassen (int ontvIndex, string ontvZin)
+        {
+            _zinnen[ontvIndex] = ontvZin;
+        }
+
     }
 }
