@@ -17,7 +17,7 @@ namespace _16_Zin
             get { return _inhoud; }
             set { _inhoud = value; }
         }
-
+        
         // methoden 
 
         // constructors
