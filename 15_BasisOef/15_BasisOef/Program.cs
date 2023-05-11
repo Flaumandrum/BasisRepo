@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _16_Zin;
 
 namespace _15_BasisOef
 {
@@ -20,27 +21,28 @@ namespace _15_BasisOef
         }
 
         // Velden
-        static private List<String> _zinnen = new List<string>();
+        static private List<Zin> _zinnen = new List<Zin>();
 
         // Functies
         static public void Opslaan(string ontvZin)
-        { 
-            _zinnen.Add(ontvZin);
+        {
+            Zin nieuweZin = new Zin(ontvZin);
+            _zinnen.Add(nieuweZin);
         }
 
         static public String Tonen ( )
         {
             string antwoord = "";
 
-            foreach(string s in _zinnen)
+            foreach(Zin z in _zinnen)
             {
-                antwoord += s + Environment.NewLine;
+                antwoord += z.PropInhoud + Environment.NewLine;
             }
 
             return antwoord;
         }
 
-        static public List<String> StuurLijstDoor()
+        static public List<Zin> StuurLijstDoor()
         {
             return _zinnen;
         }
@@ -52,7 +54,9 @@ namespace _15_BasisOef
 
         static public void Aanpassen (int ontvIndex, string ontvZin)
         {
-            _zinnen[ontvIndex] = ontvZin;
+            Zin nieuweZin = new Zin(ontvZin);
+            //_zinnen[ontvIndex] = nieuweZin ;
+            _zinnen.Insert(ontvIndex, nieuweZin);
         }
 
     }
