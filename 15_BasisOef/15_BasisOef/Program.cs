@@ -55,8 +55,8 @@ namespace _15_BasisOef
         static public void Aanpassen (int ontvIndex, string ontvZin)
         {
             Zin nieuweZin = new Zin(ontvZin);
-            //_zinnen[ontvIndex] = nieuweZin ;
-            _zinnen.Insert(ontvIndex, nieuweZin);
+            _zinnen[ontvIndex] = nieuweZin ;
+            
         }
 
     }

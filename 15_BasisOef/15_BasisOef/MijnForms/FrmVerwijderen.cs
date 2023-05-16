@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _16_Zin;
 
 namespace _15_BasisOef.MijnForms
 {
@@ -24,12 +25,12 @@ namespace _15_BasisOef.MijnForms
 
         private void VulCmb()
         {
-            List<String> ontvZinnen = Program.StuurLijstDoor();
+            List<Zin> ontvZinnen = Program.StuurLijstDoor();
             cmbKiesZin.Items.Clear();
 
-            foreach(string s in ontvZinnen)
+            foreach(Zin z in ontvZinnen)
             {
-                cmbKiesZin.Items.Add(s);
+                cmbKiesZin.Items.Add(z.PropInhoud);
             }
         }
 
