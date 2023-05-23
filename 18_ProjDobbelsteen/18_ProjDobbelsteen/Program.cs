@@ -39,7 +39,14 @@ namespace _18_ProjDobbelsteen
             }
             
         }
-
+        // Willekeurig getal van 4 cijfer
+        /* 
+            string antwoord = "";
+        for(int i = 0; i<4; i ++)
+        {
+           antwoord +=  _rdm.next(0,10).toString();
+        }
+         */
 
         // Toon de resultaten 
         static public string ToonResultaat()
