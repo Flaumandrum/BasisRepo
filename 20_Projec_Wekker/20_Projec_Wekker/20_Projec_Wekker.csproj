@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C361F23-5B01-4D14-99DB-7FEF65CF38C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>_20_Projec_Wekker</RootNamespace>
+    <AssemblyName>20_Projec_Wekker</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="19Klasses_ProjWekker">
+      <HintPath>..\..\19Klasses_ProjWekker\19Klasses_ProjWekker\bin\Debug\19Klasses_ProjWekker.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmAlarmAanpassen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlarmAanpassen.Designer.cs">
+      <DependentUpon>FrmAlarmAanpassen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAlarmenTonen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlarmenTonen.Designer.cs">
+      <DependentUpon>FrmAlarmenTonen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAlarmInstellen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlarmInstellen.Designer.cs">
+      <DependentUpon>FrmAlarmInstellen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAlarmVerwijderen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlarmVerwijderen.Designer.cs">
+      <DependentUpon>FrmAlarmVerwijderen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHuidigeTijd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHuidigeTijd.Designer.cs">
+      <DependentUpon>FrmHuidigeTijd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStart.Designer.cs">
+      <DependentUpon>FrmStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAlarmAanpassen.resx">
+      <DependentUpon>FrmAlarmAanpassen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAlarmenTonen.resx">
+      <DependentUpon>FrmAlarmenTonen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAlarmInstellen.resx">
+      <DependentUpon>FrmAlarmInstellen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAlarmVerwijderen.resx">
+      <DependentUpon>FrmAlarmVerwijderen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHuidigeTijd.resx">
+      <DependentUpon>FrmHuidigeTijd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStart.resx">
+      <DependentUpon>FrmStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
