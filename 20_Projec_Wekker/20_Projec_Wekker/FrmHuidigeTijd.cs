@@ -16,5 +16,15 @@ namespace _20_Projec_Wekker
         {
             InitializeComponent();
         }
+
+        private void btnTerug_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void FrmHuidigeTijd_Load(object sender, EventArgs e)
+        {
+            lblTijd.Text = Program.GetHuidigeTijd();
+        }
     }
 }

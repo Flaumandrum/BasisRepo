@@ -25,24 +25,46 @@ namespace _20_Projec_Wekker
         static List<Wekker> _alarmen = new List<Wekker> ();
 
         // Functie
+
+        /// <summary>
+        /// Toont de huide datum en tijd
+        /// </summary>
+        /// <returns></returns>
         static public String GetHuidigeTijd()
         {
             string antwoord = "";
 
+            antwoord = $"{DateTime.Now.ToShortDateString()}   {DateTime.Now.ToShortTimeString()}";
+
             return antwoord;
         }
 
+        /// <summary>
+        /// voeg een ontvangen alarm toe
+        /// </summary>
+        /// <param name="alarm"></param>
         static public void InstellenAlarm(DateTime alarm)
         {
             // eerst een object aanmaken 
-           
-            // toevoegen aan de list
+            Wekker nieuwObj = new Wekker(alarm);
 
+            // toevoegen aan de list
+            _alarmen.Add(nieuwObj);
         }
 
+        /// <summary>
+        /// Pas een bepaald alarm aan in de lijst
+        /// </summary>
+        /// <param name="alarm"></param>
+        /// <param name="actief"></param>
+        /// <param name="index"></param>
         static public void AanpassenAlarm(DateTime alarm, Boolean actief, int index)
         {
+            // eerst een object aanmaken 
+            Wekker nieuwObj = new Wekker(alarm, actief);
 
+            // toevoegen aan de list
+            _alarmen[index] = nieuwObj;
         }
 
         /// <summary>
@@ -86,9 +108,20 @@ namespace _20_Projec_Wekker
             return antwoord;
         }
 
+        /// <summary>
+        /// zet alle alarmen onder elkaar 
+        /// </summary>
+        /// <returns></returns>
         static public String ToonAlarmen()
         {
             string antwoord = "";
+
+            // overloop de list
+            foreach(Wekker w in _alarmen)
+            {
+                // neem de juiste functie uit de klasse
+                antwoord += $"{w.AlleGegevens()} {Environment.NewLine}";
+            }
 
             return antwoord;
         }
