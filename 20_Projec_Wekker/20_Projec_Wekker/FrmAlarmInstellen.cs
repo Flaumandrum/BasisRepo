@@ -24,12 +24,38 @@ namespace _20_Projec_Wekker
 
         private void btnOpslaan_Click(object sender, EventArgs e)
         {
-            string volledig = $"{txtDatum.Text} + " "+ txtDatum.Text + 
-            DateTime alarm = DateTime.Parse();
-            alarm;
-            alarm.AddMinutes(double.Parse(txtMin.Text));
+            //check of er gegevens zijn ingevuld
+            if (txtDatum.Text != "" && txtUur.Text != "" && txtMin.Text != "")
+            {
+                // kijk of de gegevens omzetbaar zijn
+                try
+                {
+                    // zet alles om naar een datum
+                    string volledig = $"{txtDatum.Text} {txtUur.Text}:{txtMin.Text}:00"; 
+                    DateTime alarm = DateTime.Parse(volledig);
 
-            MessageBox.Show(alarm.ToString());
+                    //stuur door naar de business
+                    Program.InstellenAlarm(alarm);
+
+                    //begeleid de gebruiker
+                    MessageBox.Show("Alles is gelukt", "Great succes!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+
+                    // form resetten
+                    txtDatum.Text = "";
+                    txtMin.Text = "";
+                    txtUur.Text = "";
+                }
+                catch
+                {
+                    MessageBox.Show("U heeft een onjuist gegeven ingevoerd", "ERROR, compter sais no!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("U heeft niet alle velden ingevuld", "ERROR, does not compute", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+            
         }
     }
 }

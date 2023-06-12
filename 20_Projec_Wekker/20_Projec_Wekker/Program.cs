@@ -89,7 +89,16 @@ namespace _20_Projec_Wekker
 
             return antwoord;
         }
-        
+
+        /// <summary>
+        /// stuur de lijst met alarmen door
+        /// </summary>
+        /// <returns></returns>
+        public static List<Wekker> StuurLijstDoor()
+        {
+            return _alarmen;
+        }
+
         /// <summary>
         /// Kijkt of de ingegeven code gelijk is aan de getoonde code
         /// </summary>
