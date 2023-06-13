@@ -23,6 +23,7 @@ namespace _20_Projec_Wekker
             Close();
         }
 
+        // vult de combobox met de gegevens
         private void VulCmb ()
         {
             // reset combobox
