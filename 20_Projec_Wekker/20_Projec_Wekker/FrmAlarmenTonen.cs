@@ -13,7 +13,7 @@ namespace _20_Projec_Wekker
     public partial class FrmAlarmenTonen : Form
     {
 
-        // veld
+        // velden
         int _getCode = Program.WillekeurigeCode();
 
         public FrmAlarmenTonen()
@@ -32,7 +32,7 @@ namespace _20_Projec_Wekker
             txtToon.Visible = false;
 
            
-
+            // Toon de code via de textbox
             lblCode.Text += _getCode.ToString();
 
 
@@ -42,7 +42,7 @@ namespace _20_Projec_Wekker
         {
             try
             {
-
+                // Check of de code juist ingevuld is
                bool ontvAntwoord =  Program.CheckCode(_getCode, int.Parse(txtCode.Text));
                 
                 if(ontvAntwoord)
